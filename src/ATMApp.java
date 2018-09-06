@@ -52,7 +52,7 @@ public class ATMApp {
 			System.out.println("Press 4 to exit");
 			menuOption = input.nextLine();
 		}
-		System.out.println("Goodbye... Thanks for banking with us today!");
+		System.out.println("Goodbye... Thanks for banking with us today!"); //shouldn't be the way it works but did this way. see like 44
 		System.exit(0);
 		input.close();
 		

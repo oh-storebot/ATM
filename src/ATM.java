@@ -2,7 +2,7 @@ import java.math.BigDecimal;
 
 public class ATM {
 	
-	private int balanceInt;
+	private int balanceInt; //used to convert to BD. see line 12
 	BigDecimal balance;
 	private String requiredPin;
 
@@ -23,12 +23,13 @@ public class ATM {
 	}
 	
 	public void withdraw(BigDecimal amount) {
-		//if(balance.) {
-			balance = balance.subtract(amount);
+		int difference = balance.compareTo(amount);
+		if(difference == -1) {
+			balance = balance.subtract(balance);
 			System.out.println(balance);
-		//}else {
-			//balance.subtract(balance);
-		//}
+		}else {
+			balance = balance.subtract(amount); //this doesn't work now
+		}
 		
 	}
 
